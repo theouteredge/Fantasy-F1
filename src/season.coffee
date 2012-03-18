@@ -1,12 +1,7 @@
+# i was going to have a season class, but wondering if we need it or if we can use use the year as the idenifier to link everything together?
+# but how would we know th active season? the current year...? would make sense...
 class Season
 	Year: 2012
-
-
-class User
-	Name: ""
-	Email: ""
-	Password: ""
-	Teams: []
 
 
 class Competition
@@ -17,7 +12,13 @@ class Competition
 
  	Year: 2012
  	Name: ""
- 	Owner: null
+ 	Organiser: null
+ 	InvitationCode: ""
+
+ 	Public: false
+ 	EntryFee: 0.0
+ 	Players: []
+
 
 
 class Team
