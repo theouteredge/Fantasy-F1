@@ -29,12 +29,12 @@ Download and install [Sublime Text 2] (http://www.sublimetext.com/2)
 ### sublimetext/textmate coffee-script plugins 
 [coffee script tmbundle] (https://github.com/jashkenas/coffee-script-tmbundle)
 
-1. goto %appdata%\sublime text 2\preferences and create a coffee-script folder
-2. clone the repository above into this folder 
+goto %appdata%\sublime text 2\preferences and create a coffee-script folder
+clone the repository above into this folder 
 	
 	git clone git@github.com@jashkenas/coffee-script-tmbundle .
 
-3. navigate to commands folder and modify the CoffeeScript.sublime-build
+navigate to commands folder and modify the CoffeeScript.sublime-build
 	
 	{
 		"path": "$HOME/bin:/usr/local/bin:$PATH",
@@ -49,4 +49,4 @@ to
 		"selector": "source.coffee"
 	}
 
-4. done :)
+and your all done :)
