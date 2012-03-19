@@ -19,7 +19,7 @@ class Competition
  	EntryFee: 0.0
  	PlayerTeams: []
 
- 	Create: (name, year, organiser) =>
+ 	create: (name, year, organiser) =>
  		true
 
 

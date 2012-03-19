@@ -11,8 +11,8 @@ class PlayerTeam
 	Drivers: []
 	Teams: []
 
-	AddTeam: (team) =>
+	addTeam: (team) =>
 		true
 
-	AddDriver: (driver) =>
+	addDriver: (driver) =>
 		true
