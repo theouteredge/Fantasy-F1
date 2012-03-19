@@ -51,3 +51,39 @@ to
 	}
 
 and your all done :)
+
+
+## Getting started git commands
+
+Get a copy of the project from github
+
+	git checkout git@github.com:theouteredge/Fantasy-F1 .
+
+Commit any changes locally
+
+	git add .
+	git commit -m "your message"
+
+Push your changes back to github
+
+	git push origin
+
+Get changes from github
+
+	git pull origin
+
+Create a branch
+
+	git branch [branch name]
+
+Create a local branch and switch to it
+
+	git co -b [branch name]
+
+Switch branches
+
+	git co [branch name]
+
+Merge two branches
+
+	git merge [branch1]/[branch2]
