@@ -8,7 +8,7 @@ class Competition
  	constructor: (year, name, owner) ->
  		@Year = year
  		@Name = name
- 		@Owner = owner
+ 		@Organiser = Organiser
 
  	Year: 2012
  	Name: ""
@@ -18,6 +18,10 @@ class Competition
  	Public: false
  	EntryFee: 0.0
  	Players: []
+
+ 	Create: (name) ->
+ 		
+
 
 
 
