@@ -43,6 +43,7 @@ navigate to commands folder and modify the CoffeeScript.sublime-build
 		"selector": "source.coffee"
 	}
 to
+	
 	{
 		"cmd": ["coffee","-c","$file"],
 		"file_regex": "^(...*?):([0-9]*):?([0-9]*)",
