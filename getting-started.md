@@ -53,7 +53,7 @@ to
 and your all done :)
 
 
-## Getting started git commands
+## basic git commands
 
 Get a copy of the project from github
 

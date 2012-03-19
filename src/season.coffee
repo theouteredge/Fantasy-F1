@@ -5,10 +5,10 @@ class Season
 
 
 class Competition
- 	constructor: (year, name, owner) ->
+ 	constructor: (year, name, organiser) ->
  		@Year = year
  		@Name = name
- 		@Organiser = Organiser
+ 		@Organiser = organiser
 
  	Year: 2012
  	Name: ""
@@ -17,10 +17,11 @@ class Competition
 
  	Public: false
  	EntryFee: 0.0
- 	Players: []
+ 	PlayerTeams: []
 
- 	Create: (name) ->
- 		
+ 	Create: (name, year, organiser) =>
+ 		true
+
 
 
 
@@ -36,6 +37,7 @@ class Team
 	LastRaceScore: 0
 
 	Drivers: []
+	Results: []
 	
 
 
@@ -50,4 +52,6 @@ class Driver
 
 	SeasonScore: 0
 	LastRaceScore: 0
+
+	Results: []
 
