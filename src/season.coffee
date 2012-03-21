@@ -1,57 +1,52 @@
-# i was going to have a season class, but wondering if we need it or if we can use use the year as the idenifier to link everything together?
-# but how would we know th active season? the current year...? would make sense...
 class Season
-	Year: 2012
+	year: 2012
+	races: []
+	teams: []
+	drivers: []
 
 
 class Competition
- 	constructor: (year, name, organiser) ->
- 		@Year = year
- 		@Name = name
- 		@Organiser = organiser
+ 	constructor: (@year, @name, @organiser) ->
 
- 	Year: 2012
- 	Name: ""
- 	Organiser: null
- 	InvitationCode: ""
+ 	year: 2012
+ 	name: ""
+ 	organiser: null
+ 	invitationCode: ""
 
- 	Public: false
- 	EntryFee: 0.0
- 	PlayerTeams: []
+ 	public: false
+ 	entryFee: 0.0
+ 	playerTeams: []
 
- 	create: (name, year, organiser) =>
- 		true
-
-
+ 	payoutStructure: [0.5, 0.3, 0.2]
 
 
 
 class Team
-	Year: 2012
-	Cost: 0
+	year: 2012
+	cost: 0
 
-	Name: ""
-	LogoUrl: ""
+	name: ""
+	logoUrl: ""
 
-	SeasonScore: 0
-	LastRaceScore: 0
+	seasonScore: 0
+	lastRaceScore: 0
 
-	Drivers: []
-	Results: []
+	drivers: []
+	results: []
 	
 
-
 class Driver
-	Year: 2012
-	Cost: 0
+	year: 2012
+	cost: 0
 
-	Name: ""
-	PictureUrl: ""
+	name: ""
+	carNo: 0
+	pictureUrl: ""
 
-	Team: null
+	team: null
 
-	SeasonScore: 0
-	LastRaceScore: 0
+	seasonScore: 0
+	lastRaceScore: 0
 
-	Results: []
+	results: []
 

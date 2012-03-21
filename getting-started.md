@@ -12,12 +12,14 @@ Note Note: you need to logout/login for any changes to the system path to take e
 
 #### PoshGit - pwershell plugins for git
 [better git with powershell] (http://haacked.com/archive/2011/12/13/better-git-with-powershell.aspx)
+
 [get git for windows] (http://haacked.com/archive/2011/12/19/get-git-for-windows.aspx)
 
 
 ### installing node.js & coffee script
-[node.js] (http://nodejs.org/)
-[download node.js installer] (http://nodejs.org/dist/v0.6.13/node-v0.6.13.msi)
+[node.js home page] (http://nodejs.org/)
+
+[download node.js installer v0.6.13] (http://nodejs.org/dist/v0.6.13/node-v0.6.13.msi)
 
 [how to install coffee script] (http://autotelicum.github.com/Smooth-CoffeeScript/literate/install-notes.pdf)
 
@@ -42,6 +44,7 @@ navigate to commands folder and modify the CoffeeScript.sublime-build
 		"file_regex": "^(...*?):([0-9]*):?([0-9]*)",
 		"selector": "source.coffee"
 	}
+	
 to
 	
 	{
