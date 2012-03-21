@@ -10,11 +10,11 @@ class FinalStanding
 			0
 
 	totalPoints: =>
-		racePoints + improvementPoints
+		racePoints + improvementPoints()
 
 
 class DriverStanding extends finalStanding
-	constructor: -> (@driver, @qualified)
+	constructor: (@driver, @qualified) -> 
 
 	driver: null
 	
@@ -30,6 +30,7 @@ class DriverStanding extends finalStanding
 	totalPoints: =>
 		total = racePoints + improvementPoints()
 
+		# bonus 5 points for pole, win & fastest lap
 		if polePosition and fastestLap and finished = 1
 			return super() + 5
 
@@ -42,6 +43,9 @@ class TeamStanding extends finalStanding
 
 
 class Race
+	constructor: (@venue, @country, @date) -> 
+
+	id: ""
 	venue: ""
 	country: ""
 	date: null
@@ -50,25 +54,41 @@ class Race
 	driverFinalStandings: [] #DriverFinalStandings
 	teamFinalStandings: []   #TeamFinalStandings
 
+
+	# do we need to define the qualifying results? or just take in a json object?
 	setQualifyingResults: (qualifyingResults) =>
 		@driverFinalStandings = for driver, i in qualifyingResults
 			new DriverStanding(driver, i)
 
+
+	# do we need to define the race results? or just take in a json object?
 	setFinalRaceResults: (raceResults) =>
 		@driverFinalStandings = for standing, i in @driverFinalStandings
-			standing.finished = getPosition(standing.driver.id, raceResults) 
+			standing.finished = getIndex(standing.driver.id, raceResults)
+			#standing.finished = selectIndex(raceResults, (driver) -> driver.id = standing.driver.id then true else false) 
+			standing.fastestLap = raceResults[standing.finished].fastestLap
 			standing
 
-	getPosition: (driverId, list) ->
+	
+	getIndex: (driverId, list) ->
 		pos = 99
 		for driver, i in list
 			if driver.id = driverId
-				pos = i
-				break
+				return i
+		99
 
-		pos
+	selectIndex: (list, func) ->
+		for item, i in list
+			if func(item) 
+				return i
+		99
 
-
+	# linq like select method
+	select: (list, func) ->
+		for item in list
+			if (func(item))
+				return item
+		null
 
 
 

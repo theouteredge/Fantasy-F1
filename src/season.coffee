@@ -8,6 +8,7 @@ class Season
 class Competition
  	constructor: (@year, @name, @organiser) ->
 
+ 	id: ""
  	year: 2012
  	name: ""
  	organiser: null
@@ -22,6 +23,7 @@ class Competition
 
 
 class Team
+	id: ""
 	year: 2012
 	cost: 0
 
@@ -36,6 +38,7 @@ class Team
 	
 
 class Driver
+	id: ""
 	year: 2012
 	cost: 0
 

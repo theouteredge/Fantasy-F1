@@ -1,4 +1,5 @@
 class User
+	id: ""
 	Name: ""
 	Email: ""
 	Password: ""
@@ -6,6 +7,7 @@ class User
 
 
 class PlayerTeam
+	id: ""
 	Name: ""
 	Owner: null
 	Drivers: []
