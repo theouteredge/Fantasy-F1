@@ -1,20 +1,25 @@
+standings = require './Standings'
+
 class Race
-	constructor: (@venue, @country, @date) -> 
+	constructor: (@id, @venue, @country, @date) -> 
+		@driverFinalStandings = []
+		@teamFinalStandings = []
 
 	id: ""
 	venue: ""
 	country: ""
 	date: null
 
-	# an ordered list of FinalStandings
-	driverFinalStandings: [] #DriverFinalStandings
-	teamFinalStandings: []   #TeamFinalStandings
+	#DriverStanding[] ordered
+	driverFinalStandings: null
+	#TeamStanding[] ordered
+	teamFinalStandings: null
 
 
 	# do we need to define the qualifying results? or just take in a json object?
 	setQualifyingResults: (qualifyingResults) =>
 		@driverFinalStandings = for driver, i in qualifyingResults
-			new DriverStanding(driver, i)
+			new standings.DriverStanding(driver, i+1)
 
 
 	# do we need to define the race results? or just take in a json object?

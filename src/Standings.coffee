@@ -15,13 +15,13 @@ class FinalStanding
 
 
 
-class TeamStanding extends finalStanding
+class TeamStanding extends FinalStanding
 	team: null
 
 
 
 
-class DriverStanding extends finalStanding
+class DriverStanding extends FinalStanding
 	constructor: (@driver, @qualified) -> 
 
 	driver: null
@@ -45,8 +45,6 @@ class DriverStanding extends finalStanding
 		total = total + 1 if polePosition
 		total = total + 1 if fastestLap
 	
-
-
 
 
 

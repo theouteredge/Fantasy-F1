@@ -1,4 +1,6 @@
 class Driver
+	constructor: (@id, @year, @cost, @name, @carNo, @pictureUrl, @team) ->
+
 	id: ""
 	year: 2012
 	cost: 0
