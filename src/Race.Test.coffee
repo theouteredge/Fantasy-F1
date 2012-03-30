@@ -9,7 +9,20 @@ drivers = for i in [1..10]
 
 
 race.setQualifyingResults drivers
-
+console.log ""
+console.log "qualifying results set"
+console.log "-------------------------------------------"
 console.log race.driverFinalStandings
-console.log race.driverFinalStandings[0].totalPoints()
-console.log race.driverFinalStandings[0].improvementPoints()
+
+
+race.setFinalRaceResults drivers, [25, 18, 15, 12, 10, 8, 6, 4, 2, 1]
+console.log ""
+console.log "final race results set"
+console.log "-------------------------------------------"
+console.log race.driverFinalStandings
+
+
+
+
+console.log "total points: #{race.driverFinalStandings[0].totalPoints()}"
+console.log "improvement points: #{race.driverFinalStandings[0].improvementPoints()}"
